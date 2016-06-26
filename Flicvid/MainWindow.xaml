@@ -1,0 +1,31 @@
+﻿<Window x:Name="FlickvidMainWindow" x:Class="Flicvid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" ResizeMode="NoResize" WindowStyle="None" PreviewKeyDown="FlickvidMainWindow_PreviewKeyDown" Icon="Flicvid.ico">
+    <Grid x:Name="Grid1" Background="#FF383737">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="546*"/>
+            <ColumnDefinition Width="162*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="94*"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="1" x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="0,1" BorderThickness="0" Style="{StaticResource ExitButtonStyle}" Click="Button_Click" BorderBrush="#FFFF2D2D" Grid.Column="3"/>
+        <Button Grid.Row="1" x:Name="FlicvidButton" Content="Flicvid" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF3279E0" Style="{StaticResource CategoryButtonStyle}" Click="FlicvidButton_Click" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button Grid.Row="1" x:Name="MoviesButton" Content="Movies" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,0,0,0" Background="#FF1F1FCB" Style="{StaticResource CategoryButtonStyle}" Click="MoviesButton_Click" Grid.Column="2"/>
+        <Button Grid.Row="1" x:Name="SeriesButton" Content="Series" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,0,0,0" Background="#FF6B4287" Style="{StaticResource CategoryButtonStyle}" Click="SeriesButton_Click" Grid.Column="2"/>
+        <Button Grid.Row="1" x:Name="AnimeButton" Content="Anime" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,0,0,0" Background="#FFB20010" Style="{StaticResource CategoryButtonStyle}" Click="AnimeButton_Click" Grid.Column="2" />
+        <Border x:Name="Border1" BorderThickness="0" Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="1">
+            <Frame x:Name="CategoryFrame" Content="" NavigationUIVisibility="Hidden"/>
+        </Border>
+        <Image  HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="3" Margin="10,44,0,0" Grid.Row="3" Source="C:\Users\thejo_000\Desktop\untitled.png"/>
+        <Label Content="Game of Thrones" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,0,0,0" Grid.Column="3" Grid.Row="2" FontSize="40" FontFamily="Tw Cen MT Condensed" Grid.RowSpan="2" Height="44"/>
+    </Grid>
+</Window>
